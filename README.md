@@ -73,8 +73,7 @@ Result = 44.77+/-1.25
 >>> from uncertainties import unumpy
 ```
 
-### Usa-se unumpy.uarray para criar lista de valores com incertezas, com uma lista dos valores nominais (exatos) seguida de 
-uma lista de incertezas:
+### Usa-se unumpy.uarray para criar lista de valores com incertezas, com uma lista dos valores nominais (exatos) seguida de uma lista de incertezas:
 
 ```python
 >>> s1vetor = unumpy.uarray([4.45e-3, 2.67e-3, 3.56e-3], [0.05e-3, 0.05e-3, 0.05e-3])
