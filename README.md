@@ -1,4 +1,4 @@
-# Guia de Instalação do Módulo Python Uncertainties
+# Guia de instalação do módulo Python Uncertainties
 
 ## Distribuições Linux
 
