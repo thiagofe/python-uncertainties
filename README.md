@@ -21,7 +21,7 @@ Para instalar este pacote com o [conda](https://pypi.org/project/pip/), execute 
 
 ```conda install -c conda-forge/label/cf201901 uncertainties```
 
-## MacOS X
+## MacOS
 
  Usuários que utilizam o gerenciador MacPorts podem instalar uncertainties utilizando:
  
