@@ -1,6 +1,6 @@
 # Guia de instalação do módulo Python Uncertainties
 
-## Distribuições Linux
+## Distribuições Linux (Debian e derivados)
 
 Se você tem [pip](https://pypi.org/project/pip/), você pode instalar a versão mais recente com:
 
