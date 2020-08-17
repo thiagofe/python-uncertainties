@@ -13,7 +13,7 @@ com:
 
 ## Windows
 
-Para instalar este pacote com o [conda](https://pypi.org/project/pip/), execute um dos seguintes procedimentos:
+Para instalar este pacote com o [conda](https://pypi.org/project/pip/), execute um dos seguintes procedimentos no interpretador prompt de comando:
 
 ```conda install -c conda-forge uncertainties``` 
 
