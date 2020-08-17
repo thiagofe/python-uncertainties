@@ -29,17 +29,10 @@ Para instalar este pacote com o [conda](https://pypi.org/project/pip/), execute 
  
 # Inicialização do Python (módulos math e uncertainties)
  
-### Carregando definições e funções matemáticas:
-
- ```python
->>> import math
-```
-
 ### Carregando o módulo Python Uncertainties, que calcula a propagação de incertezas:
 
 ```python
 >>> import uncertainties import *
->>> import uncertainties.umath import *
 ```
  
 ## Definição de parâmetros e fórmulas com incertezas
@@ -48,21 +41,21 @@ Para instalar este pacote com o [conda](https://pypi.org/project/pip/), execute 
 
 
 ```python
->>> a = ufloat(23.45, 0.98)
+>>> a = ufloat(23.45, 0.12)
 >>> print(a)
-23.45+/-0.98
+23.45+/-0.12
 ```
- 
- ```python
- >>> b = ufloat(21.32, 0.78)
+
+```python
+ >>> b = ufloat(21.32, 0.21)
  >>> print(b)
- 21.32+/-0.78
+21.32+/-0.21
 ```
 
 ```python
 >>> c = a + b
 >>> print("Resultado = {0:.2f}".format(c))
-Result = 44.77+/-1.25
+Resultado = 44.77+/-0.24
 ```
 
 ## Propagação de incertezas para um vetor/lista de valores
@@ -78,21 +71,22 @@ Result = 44.77+/-1.25
 ```python
 >>> s1vetor = unumpy.uarray([4.45e-3, 2.67e-3, 3.56e-3], [0.05e-3, 0.05e-3, 0.05e-3])
 >>> print(s1vetor)
-array([0.00445+/-5e-05, 0.00267+/-5e-05, 0.00356+/-5e-05], dtype=object)
+[0.00445+/-5e-05 0.00267+/-5e-05 0.00356+/-5e-05]
 ```
 
 ```python
->>> t1vetor = unumpy.uarray([9.6, 6.9, 6.4], [0.5, 0.5, 0.5])
+>>> t1vetor = unumpy.uarray([9.62e-3, 6.19e-3, 6.44e-3], [0.15e-3, 0.15e-3, 0.15e-3])
 >>> print(t1vetor)
-array([9.6+/-0.5, 6.9+/-0.5, 6.4+/-0.5], dtype=object)
+[0.00962+/-0.00015 0.00619+/-0.00015 0.00644+/-0.00015]
 ```
 
 ### Operações aritméticas simples são feitas normal e transparentemente com lista de valores com incertezas:
 
 ```python
->>> v1vetor = (s1vetor/t1vetor)
->>> print(v1vetor)
-array([0.0004635416666666667+/-2.469820425110838e-05,
-       0.0003869565217391304+/-2.8961525379411206e-05,
-       0.0005562499999999999+/-4.4153694311048036e-05], dtype=object)
+>>> v1vetor = s1vetor + t1vetor
+>>> for x in v1vetor:
+>>>     print("{0:.2e}".format(x))
+(1.41+/-0.02)e-02
+(8.86+/-0.16)e-03
+(1.00+/-0.02)e-02
 ```
