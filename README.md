@@ -37,7 +37,7 @@ Para instalar este pacote com o [conda](https://pypi.org/project/pip/), execute 
  
 ## Definição de parâmetros e fórmulas com incertezas
 
-### Use a função "ufloat" para definir números reais com incertezas ('u' de uncertainties, 'float' de número de ponto flutuante):
+### Use a função "ufloat" para definir números reais com incertezas:
 
 
 ```python
@@ -66,7 +66,7 @@ Resultado = 44.77+/-0.24
 >>> from uncertainties import unumpy
 ```
 
-### Usa-se unumpy.uarray para criar lista de valores com incertezas, com uma lista dos valores nominais (exatos) seguida de uma lista de incertezas:
+### Usa-se a função unumpy.uarray() para criar lista de valores, seguida de uma lista de incertezas:
 
 ```python
 >>> s1vetor = unumpy.uarray([4.45e-3, 2.67e-3, 3.56e-3], [0.05e-3, 0.05e-3, 0.05e-3])
